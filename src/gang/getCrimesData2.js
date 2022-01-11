@@ -37,9 +37,9 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting getCrimesData2.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /gang/getCrimesData2.js`)
 
-  const scriptToRunAfter = ns.args[0] || '/suite/commitCrime.js'
+  const scriptToRunAfter = ns.args[0] || '/gang/commitCrime.js'
 
   let hostname = ns.getHostname()
 

@@ -25,7 +25,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 function getCrimesData(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Spawning getCrimesData.js`)
+  ns.tprint(`[${localeHHMMSS()}] Spawning /gang/getCrimesData.js`)
   ns.spawn('/gang/getCrimesData.js', 1)
 }
 
@@ -54,7 +54,7 @@ function selectCrime(crimes) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting commitCrime.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /gang/commitCrime.js`)
 
   let hostname = ns.getHostname()
 

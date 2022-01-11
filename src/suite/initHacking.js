@@ -22,7 +22,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting initHacking.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /suite/initHacking.js`)
 
   let hostname = ns.getHostname()
 
@@ -42,6 +42,6 @@ export async function main(ns) {
 
   valuesToRemove.map((value) => localStorage.removeItem(value))
 
-  ns.tprint(`[${localeHHMMSS()}] Spawning killAll.js`)
+  ns.tprint(`[${localeHHMMSS()}] Spawning /suite/killAll.js`)
   ns.spawn('/suite/killAll.js', 1, '/suite/runHacking.js')
 }

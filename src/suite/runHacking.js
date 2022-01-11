@@ -7,7 +7,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting runHacking.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /suite/runHacking.js`)
 
   let hostname = ns.getHostname()
 
@@ -18,13 +18,13 @@ export async function main(ns) {
   const homeRam = ns.getServerRam('home').shift()
 
   if (homeRam >= 32) {
-    ns.tprint(`[${localeHHMMSS()}] Spawning spider.js`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning /suite/spider.js`)
     await ns.run('/suite/spider.js', 1, '/suite/mainHack.js')
     await ns.sleep(3000)
-    ns.tprint(`[${localeHHMMSS()}] Spawning playerServers.js`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning /suite/playerServers.js`)
     ns.spawn('/suite/playerServers.js', 1)
   } else {
-    ns.tprint(`[${localeHHMMSS()}] Spawning spider.js`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning /suite/spider.js`)
     ns.spawn('/suite/spider.js', 1, '/suite/mainHack.js')
   }
 }

@@ -24,10 +24,10 @@ export async function main(ns) {
   }
 
   await ns.wget(
-    `https://raw.githubusercontent.com/roflcopter572/bitburner/master/src/initHacking.ns?ts=${new Date().getTime()}`,
-    "initHacking.ns"
+    `https://raw.githubusercontent.com/roflcopter572/bitburner/master/src/suite/initHacking.js?ts=${new Date().getTime()}`,
+    "/suite/initHacking.js"
   );
-  ns.spawn("initHacking.ns", 1);
+  ns.spawn("/suite/initHacking.js", 1);
 }
 ```
 

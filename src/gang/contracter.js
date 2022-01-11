@@ -402,7 +402,7 @@ function findAnswer(contract) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting contracter.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /gang/contracter.js`)
 
   let hostname = ns.getHostname()
 

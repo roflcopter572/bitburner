@@ -43,7 +43,7 @@ function printPathToServer(servers, serverToFind) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting find.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /suite/find.js`)
 
   const serverToFind = ns.args[0]
 

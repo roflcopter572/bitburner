@@ -144,7 +144,7 @@ function sortBy(ns, sortType = null, direction = DIRECTIONS.ASC) {
 
 export async function main(ns) {
   ns.disableLog('ALL')
-  ns.tprint(`[${localeHHMMSS()}] Starting gangFastAscender.js`)
+  ns.tprint(`[${localeHHMMSS()}] Starting /gang/gangFastAscender.js`)
 
   let hostname = ns.getHostname()
 
