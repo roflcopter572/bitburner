@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const baseUrl = 'https://raw.githubusercontent.com/roflcopter572/bitburner/master/src/suite/'
 const filesToDownload = [
   '/suite/common.js',
@@ -11,20 +10,6 @@ const filesToDownload = [
   '/suite/killAll.js',
   '/suite/runHacking.js',
   '/suite/find.js',
-=======
-const baseUrl = 'https://raw.githubusercontent.com/roflcopter572/bitburner/master/src/suite'
-const filesToDownload = [
-  'common.ns',
-  'mainHack.ns',
-  'spider.ns',
-  'grow.ns',
-  'hack.ns',
-  'weaken.ns',
-  'playerServers.ns',
-  'killAll.ns',
-  'runHacking.ns',
-  'find.ns',
->>>>>>> c3bd6deb995bbe542d34a41d7a489dd3543b0fbe
 ]
 const valuesToRemove = ['BB_SERVER_MAP']
 
@@ -37,11 +22,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-<<<<<<< HEAD
   ns.tprint(`[${localeHHMMSS()}] Starting initHacking.js`)
-=======
-  ns.tprint(`[${localeHHMMSS()}] Starting initHacking.ns`)
->>>>>>> c3bd6deb995bbe542d34a41d7a489dd3543b0fbe
 
   let hostname = ns.getHostname()
 
@@ -61,11 +42,6 @@ export async function main(ns) {
 
   valuesToRemove.map((value) => localStorage.removeItem(value))
 
-<<<<<<< HEAD
   ns.tprint(`[${localeHHMMSS()}] Spawning killAll.js`)
   ns.spawn('/suite/killAll.js', 1, '/suite/runHacking.js')
-=======
-  ns.tprint(`[${localeHHMMSS()}] Spawning killAll.ns`)
-  ns.spawn('killAll.ns', 1, 'runHacking.ns')
->>>>>>> c3bd6deb995bbe542d34a41d7a489dd3543b0fbe
 }
