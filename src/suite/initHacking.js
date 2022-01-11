@@ -1,4 +1,4 @@
-const baseUrl = 'https://raw.githubusercontent.com/roflcopter572/bitburner/master/src/suite/'
+const baseUrl = 'https://raw.githubusercontent.com/roflcopter572/bitburner/master/src'
 const filesToDownload = [
   '/suite/common.js',
   '/suite/mainHack.js',

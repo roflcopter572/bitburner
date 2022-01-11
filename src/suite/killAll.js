@@ -5,16 +5,16 @@ const settings = {
   },
 }
 const scriptsToKill = [
-  'mainHack.ns',
-  'spider.ns',
-  'grow.ns',
-  'hack.ns',
-  'weaken.ns',
-  'playerServers.ns',
-  'runHacking.ns',
-  'initHacking.ns',
-  'start.ns',
-  'find.ns',
+  '/suite/mainHack.js',
+  '/suite/spider.js',
+  '/suite/grow.js',
+  '/suite/hack.js',
+  '/suite/weaken.js',
+  '/suite/playerServers.js',
+  '/suite/runHacking.js',
+  '/suite/initHacking.jns',
+  '/suite/start.js',
+  '/suite/find.js',
 ]
 
 function getItem(key) {
@@ -32,7 +32,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting killAll.ns`)
+  ns.tprint(`[${localeHHMMSS()}] Starting killAll.js`)
 
   const scriptToRunAfter = ns.args[0]
 
@@ -45,8 +45,8 @@ export async function main(ns) {
   const serverMap = getItem(settings.keys.serverMap)
 
   if (!serverMap || serverMap.lastUpdate < new Date().getTime() - settings.mapRefreshInterval) {
-    ns.tprint(`[${localeHHMMSS()}] Spawning spider.ns`)
-    ns.spawn('spider.ns', 1, 'killAll.ns')
+    ns.tprint(`[${localeHHMMSS()}] Spawning spider.js`)
+    ns.spawn('/suite/spider.js', 1, '/suite/killAll.js')
     ns.exit()
     return
   }
@@ -69,7 +69,7 @@ export async function main(ns) {
     ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter}`)
     ns.spawn(scriptToRunAfter, 1)
   } else {
-    ns.tprint(`[${localeHHMMSS()}] Spawning runHacking.ns`)
-    ns.spawn('runHacking.ns', 1)
+    ns.tprint(`[${localeHHMMSS()}] Spawning runHacking.js`)
+    ns.spawn('/suite/runHacking.js', 1)
   }
 }
